@@ -45,15 +45,21 @@ public class Main{
         if(str.length() < 2){
             return 0;
         }
-        // checks if first to letter combine to maek hi
-        if (str.substring(0,2).equals("hi")){
-            return 1+ countHi(str.substring(1));
+        
+        if (str.length()>= 3 && str.substring(0,3).equals("xhi")){
+            return  countHi2(str.substring(3));
 
+        }else if (str.substring(0, 2).equals("hi")){
+            return 1 + countHi2(str.substring(2));
         }else{
-            return countHi(str.substring(1));
+            return countHi2(str.substring(1));
         }
     }
 
+   // public static int strCount(String str,String sub){
+
+
+   // }
 
 
 
