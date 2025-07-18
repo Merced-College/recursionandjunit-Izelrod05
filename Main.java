@@ -16,7 +16,7 @@ public class Main{
 
         if(lastDigit == 8){
              if (nextDigit == 8) {
-                 return 2 + count8(n / 10); // Double count and skip only one digit to catch overlapping 8s
+                 return 2 + count8(n / 10);
              } else {
                 return 1 + count8(n / 10);
              }
@@ -25,4 +25,37 @@ public class Main{
         }
         
     }  
+
+    public static int countHi(String str){
+        // hi cannot be less than 2 letters long
+        if(str.length() < 2){
+            return 0;
+        }
+        // checks if first to letter combine to maek hi
+        if (str.substring(0,2).equals("hi")){
+            return 1+ countHi(str.substring(1));
+
+        }else{
+            return countHi(str.substring(1));
+        }
+    }
+
+    public static int countHi2(String str){
+        // hi cannot be less than 2 letters long
+        if(str.length() < 2){
+            return 0;
+        }
+        // checks if first to letter combine to maek hi
+        if (str.substring(0,2).equals("hi")){
+            return 1+ countHi(str.substring(1));
+
+        }else{
+            return countHi(str.substring(1));
+        }
+    }
+
+
+
+
+
 }
