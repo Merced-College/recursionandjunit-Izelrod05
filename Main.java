@@ -56,10 +56,19 @@ public class Main{
         }
     }
 
-   // public static int strCount(String str,String sub){
+    public static int strCount(String str,String sub){
+        if(str.length() < sub.length()){
+            return 0;
+        }//Used copilot to help with this 
+        if(str.substring(0,sub.length()).equals(sub)){
+            return 1 + strCount(str.substring(sub.length()), sub);
+        }else{
+            return strCount(str.substring(1), sub);
+        }
 
+   }
 
-   // }
+   //public static String stringClean(String str);
 
 
 

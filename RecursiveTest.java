@@ -33,7 +33,11 @@ public class RecursiveTest{
     }
     @Test
      public void strCount(){
-      
+        assertEquals(4,Main.strCount("timbobjhonbobtimmybobtonybob","bob"));
+        assertEquals(2,Main.strCount("hiholahellohola","hola"));
+        assertEquals(0,Main.strCount("bobbilljohn","timmy"));
+        assertEquals(3,Main.strCount("dogfooddogfoodfood","food"));
+        assertEquals(2,Main.strCount("catcowcat","cat"));
 
     }
 
