@@ -1,0 +1,17 @@
+import static org.junit.Assert.assertEquals;
+import org.junit.Test;
+
+public class RecursiveTest{
+
+    @Test 
+    public void count8(){
+        assertEquals(1,Main.count8(8));
+        assertEquals(4,Main.count8(8818));
+        assertEquals(3,Main.count8(80808));
+        assertEquals(5,Main.count8(888));
+        assertEquals(0,Main.count8(1234567));
+    }
+
+
+    
+}
