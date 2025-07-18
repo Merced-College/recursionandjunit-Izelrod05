@@ -40,6 +40,15 @@ public class RecursiveTest{
         assertEquals(2,Main.strCount("catcowcat","cat"));
 
     }
+    @Test
+     public void stringClean(){
+        assertEquals("HeLo",Main.stringClean("HeLLLLLLLo"));
+        assertEquals("tim",Main.stringClean("timmmm"));
+        assertEquals("yza",Main.stringClean("yzzzzzzzzza"));
+        assertEquals("abcd",Main.stringClean("abbcccdd"));
+        assertEquals("cat",Main.stringClean("ccaattt"));
+
+    }
 
 
 }

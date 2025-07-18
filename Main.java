@@ -68,7 +68,20 @@ public class Main{
 
    }
 
-   //public static String stringClean(String str);
+   public static String stringClean(String str){
+    if (str.length() <= 1){
+        return str;
+    }
+    //skips a char if its the same as next one
+     if (str.charAt(0) == str.charAt(1)){
+        return stringClean(str.substring(1));
+     }else {
+        //keeps 1st char and skips dupes
+        return str.charAt(0) + stringClean(str.substring(1));
+
+     }
+
+   }
 
 
 
